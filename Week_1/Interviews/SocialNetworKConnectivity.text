@@ -1,0 +1,13 @@
+Question:
+
+
+1. The problem can be best solved using a Union-Find algorithm, specifically Weighted Quick Union (WQU).
+2. The only update needed in Weighted Quick Union occurs in the union method:
+   - Step 1:
+     - Two variables, A and B, are declared and initialized to 0. A = 0 indicates not all nodes are connected, and B = 0 indicates no two nodes are connected.
+   - Step 2:
+     - Introduce variable B in the union method, incrementing its value for each call based on the log content stored in M.
+     - Assign the value of B to A "if and only if" B == N - 1, where N represents the total number of members.
+   - Step 3:
+     - The earliest time at which all members are connected will then be:
+       - The timestamp corresponding to serial number A, counting from the first timestamp to A timestamp.
